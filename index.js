@@ -16,6 +16,8 @@ selectionBtn.addEventListener('click', (e, movies) => {
       const title = document.createElement('h1')
       const temp = document.createElement('h1')
       const location = document.createElement('p')
+      const forcastDisplay = document.querySelector('.forcastDisplay')
+      forcastDisplay.style.display = 'flex'
       location.textContent = `${movies.location.name}`
       temp.textContent = `${movies.current.temp_f} F`
       if(movies.current.condition.text === "Sunny") {
