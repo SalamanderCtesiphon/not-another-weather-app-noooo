@@ -8,19 +8,31 @@
   src: url(/fonts/neuropolitical\ rg.otf);
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   min-height: 100vh;
   min-width: 100vw;
   font-family: custom, 'Courier New', Courier, monospace;
   background: linear-gradient(135deg, #97ABFF 0%, #123597 100%);
   color: white;
-  letter-spacing: 1px;
 }
 
 header {
   width: 100%;
   text-align: center;
+  
+}
+
+header>h1 {
+  font-weight: lighter;
 }
 
 main {
@@ -30,6 +42,7 @@ main {
   padding: 2em;
   width: 100%;
   height: 100%;
+  letter-spacing: 1px;
 }
 
 form {
@@ -116,7 +129,8 @@ form>input {
 }
 
 .locationName {
-  font-size: 50px;
+  font-size: 40px;
+  line-height: 50px;
   font-weight: bold;
 }
 
@@ -127,15 +141,16 @@ form>input {
   justify-content: center;
 }
 
-.subHeader>span {
-  width: 220px;
+#locationSpan {
+  width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .cardBody {
-  width: 400px;
+  margin-top: 20px;
+  width: 360px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,7 +180,7 @@ span {
   height: 260px;
   width: 120px;
   display: flex;
-  padding: 16px 8px;
+  padding: 20px 8px;
   flex-direction: column;
   align-items: center;
   gap: 8px; 
@@ -174,3 +189,13 @@ span {
   background: linear-gradient(165deg, #FFF -113.24%, rgba(255, 255, 255, 0.00) 97.65%);
 }
 
+footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+footer>a {
+  display: flex;
+}

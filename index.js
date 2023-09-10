@@ -1,5 +1,7 @@
 const selectionBtn = document.getElementById('selection-btn')
 
+const currentYear = document.querySelector('.year');
+currentYear.textContent = new Date().getFullYear();
 
 selectionBtn.addEventListener('click', (e, movies) => {
   e.preventDefault()
