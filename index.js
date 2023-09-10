@@ -1,9 +1,25 @@
 const selectionBtn = document.getElementById('selection-btn')
 
 
-selectionBtn.addEventListener('click', (e) => {
+selectionBtn.addEventListener('click', (e, movies) => {
   e.preventDefault()
-  getWeather().catch(function(err) {
+  getWeather()
+  .then(
+    (movies) => {
+      const display = document.querySelector('.display')
+      const mainImage = document.createElement('img')
+      const title = document.createElement('h1')
+      const temp = document.createElement('h1')
+      temp.textContent = `${movies.current.temp_f} `
+      title.textContent = movies.current.condition.text
+      mainImage.src = movies.current.condition.icon
+      display.appendChild(mainImage)
+      display.appendChild(temp)
+      display.appendChild(title)
+      
+    }
+  )
+  .catch(function(err) {
     console.log(err)
   })
 })
@@ -17,3 +33,4 @@ async function getWeather() {
   console.log(movies);
   return movies
 }
+
