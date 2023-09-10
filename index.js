@@ -26,6 +26,7 @@ selectionBtn.addEventListener('click', (e, movies) => {
   .catch(function(err) {
     console.log(err)
   })
+  getForcast()
 })
 
 async function getWeather() {
@@ -38,3 +39,12 @@ async function getWeather() {
   return movies
 }
 
+async function getForcast() {
+  let selection = document.getElementById('selection').value
+  const response = await
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=6198ff01fbf84dfbbac171056230305&q=${selection}`,
+      { mode: 'cors'})
+  const forecast = await response.json()
+  console.log(forecast)
+  return forecast    
+}
