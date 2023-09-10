@@ -46,6 +46,14 @@ form {
   height: 90px;
 }
 
+form>input {
+  background-color: #8c9dff00;
+  border: 1px solid gray;
+  border-radius: 1em;
+  padding: 2px 6px;
+  padding-left: 10px;
+}
+
 .button {
   position: relative;
   width: 100px;
