@@ -20,7 +20,8 @@ body {
   min-width: 100vw;
   font-family: custom, 'Courier New', Courier, monospace;
   background: linear-gradient(135deg, #97ABFF 0%, #123597 100%);
-
+  color: white;
+  letter-spacing: 2px;
 }
 
 header {
@@ -47,25 +48,27 @@ form {
 }
 
 form>input {
-  background-color: #8c9dff00;
-  border: 1px solid rgba(73, 73, 73, 0.594);
+  background-color: #8c9dff;
   border-radius: 1em;
+  border: none;
   padding: 2px 6px;
   padding-left: 10px;
 }
 
 .button {
   position: relative;
-  width: 100px;
+  width: 120px;
   height: 30px;
   background-color: #000;
   display: flex;
   align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
   color: white;
   flex-direction: column;
   justify-content: center;
   border: none;
-  padding: 12px;
+  padding: 4px;
   gap: 12px;
   border-radius: 8px;
   cursor: pointer;
@@ -78,7 +81,7 @@ form>input {
   left: -4px;
   top: -1px;
   margin: auto;
-  width: 108px;
+  width: 128px;
   height: 38px;
   border-radius: 10px;
   background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
