@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "custom";
+  src: url(/fonts/neuropolitical\ rg.otf);
+}
+
 :root {
   --blue: #3D5AFE;
   --lt-blue: #8C9EFF;
@@ -13,5 +18,12 @@
 body {
   min-height: 100vh;
   min-width: 100vw;
+  font-family: custom, 'Courier New', Courier, monospace;
+  background-color: var(--lt-blue);
+}
+
+header {
   background-color: var(--blue);
+  width: 100%;
+  text-align: center;
 }
