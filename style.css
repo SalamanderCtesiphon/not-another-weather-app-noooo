@@ -119,9 +119,17 @@ form>input {
   justify-content: space-around;
   height: 300px;
   width: 300px;
-  border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.20);
-  background: linear-gradient(165deg, #ffffffe0 -113.24%, rgba(255, 255, 255, 0.00) 97.65%);
-  padding: 20px 0;
+}
+
+.locationName {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.subHeader>span {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
