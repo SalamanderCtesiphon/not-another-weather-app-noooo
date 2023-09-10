@@ -8,12 +8,6 @@
   src: url(/fonts/neuropolitical\ rg.otf);
 }
 
-:root {
-  --blue: #3D5AFE;
-  --lt-blue: #8C9EFF;
-  --bold-yellow: #FFEA00;
-  --yellow: #FFFF8D;
-}
 
 body {
   min-height: 100vh;
