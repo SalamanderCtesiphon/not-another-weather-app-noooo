@@ -2,3 +2,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --blue: #3D5AFE;
+  --lt-blue: #8C9EFF;
+  --bold-yellow: #FFEA00;
+  --yellow: #FFFF8D;
+}
