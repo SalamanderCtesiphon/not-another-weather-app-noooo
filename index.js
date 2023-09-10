@@ -3,15 +3,18 @@ const selectionBtn = document.getElementById('selection-btn')
 
 selectionBtn.addEventListener('click', (e, movies) => {
   e.preventDefault()
+  const form = document.getElementById('form')
+  form.style.display = 'none'
   getWeather()
   .then(
     (movies) => {
       const display = document.querySelector('.display')
+      display.style.display = 'flex'
       const mainImage = document.createElement('img')
       const title = document.createElement('h1')
       const temp = document.createElement('h1')
       const location = document.createElement('p')
-      location.textContent = movies.location.name
+      location.textContent = `Currently in ${movies.location.name}`
       temp.textContent = `${movies.current.temp_f} `
       title.textContent = movies.current.condition.text
       mainImage.src = movies.current.condition.icon
