@@ -43,7 +43,7 @@ form {
   align-items: center;
   justify-content: space-around;
   width: 200px;
-  height: 120px;
+  height: 90px;
 }
 
 .button {
@@ -102,6 +102,7 @@ form {
 }
 
 .display {
+  margin-top: 2em;
   border: 1px solid black;
   padding: 1em;
   display: flex;
