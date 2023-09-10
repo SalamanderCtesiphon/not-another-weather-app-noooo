@@ -9,3 +9,9 @@
   --bold-yellow: #FFEA00;
   --yellow: #FFFF8D;
 }
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--blue);
+}
