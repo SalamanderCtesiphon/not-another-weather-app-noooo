@@ -122,8 +122,15 @@ form>input {
 }
 
 .locationName {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
+}
+
+.subHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .subHeader>span {
@@ -137,6 +144,15 @@ form>input {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+img {
+  height: 180px;
+  width: auto;
+}
+
+span {
+  margin-top: -30px;
+}
 

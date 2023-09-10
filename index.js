@@ -18,8 +18,10 @@ selectionBtn.addEventListener('click', (e, movies) => {
       const location = document.createElement('p')
       location.textContent = `${movies.location.name}`
       temp.textContent = `${movies.current.temp_f} F`
+      if(movies.current.condition.text === "Sunny") {
+        mainImage.src = '/icons/sunny.png'
+      }
       title.textContent = movies.current.condition.text
-      mainImage.src = movies.current.condition.icon
       const cardBodyBox = document.createElement('div')
       cardBodyBox.style.textAlign = 'center'
       locationName.appendChild(location)
