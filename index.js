@@ -11,6 +11,7 @@ selectionBtn.addEventListener('click', (e, movies) => {
       const display = document.querySelector('.display')
       display.style.display = 'flex'
       const locationName = document.querySelector('.locationName')
+      const cardBody = document.querySelector('.cardBody')
       const mainImage = document.createElement('img')
       const title = document.createElement('h1')
       const temp = document.createElement('h1')
@@ -19,11 +20,15 @@ selectionBtn.addEventListener('click', (e, movies) => {
       temp.textContent = `${movies.current.temp_f} `
       title.textContent = movies.current.condition.text
       mainImage.src = movies.current.condition.icon
+      const cardBodyBox = document.createElement('div')
+      
       locationName.appendChild(location)
-      display.appendChild(mainImage)
+      cardBody.appendChild(mainImage)
      
-      display.appendChild(title)
-      display.appendChild(temp)
+      cardBodyBox.appendChild(title)
+      cardBodyBox.appendChild(temp)
+      cardBody.appendChild(cardBodyBox)
+      display.appendChild(cardBody)
       
     }
   )

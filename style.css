@@ -133,3 +133,9 @@ form>input {
   align-items: center;
 }
 
+.cardBody {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
