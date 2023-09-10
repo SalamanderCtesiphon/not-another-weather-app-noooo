@@ -14,6 +14,7 @@ selectionBtn.addEventListener('click', (e, movies) => {
       const cardBody = document.querySelector('.cardBody')
       const mainImage = document.createElement('img')
       const title = document.createElement('h1')
+      title.setAttribute('class', 'titleName')
       const temp = document.createElement('h1')
       const location = document.createElement('p')
       const forcastDisplay = document.querySelector('.forcastDisplay')
@@ -50,5 +51,22 @@ async function getWeather() {
   console.log(movies);
   return movies
 }
+
+const locationSpan = document.getElementById('locationSpan')
+
+locationSpan.addEventListener('click', (e) => {
+  e.preventDefault()
+  const display = document.querySelector('.display')
+  display.style.display = 'none'
+  const cardBody = document.querySelector('.cardBody')
+  cardBody.innerHTML = ''
+
+  
+  const title = document.querySelector('.titleName')
+  title.innerHTML = ''
+ 
+  const forcastDisplay = document.getElementById('forcastID')
+  forcastDisplay.style.display = 'none'
+})
 
 
