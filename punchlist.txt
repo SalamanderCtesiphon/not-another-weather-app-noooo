@@ -23,3 +23,5 @@
 
 [] look to implement some sort of trending list for like twitter or other things...
    is there a trending of github or linked in or something else equally as terrible
+
+[] implement a env file for api key protection
