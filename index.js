@@ -59,9 +59,7 @@ selectionBtn.addEventListener('click', (e, movies) => {
       const ndText = document.querySelector('.ndText')
       ndText.textContent = movies.forecast.forecastday[1].day.condition.text
 
-      const ndCondition = document.createElement('small')
-      ndCondition.textContent = movies.forecast.forecastday[1].day.text
-      nextDayImg.appendChild(ndCondition)
+    
 
       locationName.appendChild(location)
       cardBody.appendChild(mainImage)
