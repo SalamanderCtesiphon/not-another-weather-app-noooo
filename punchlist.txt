@@ -5,7 +5,7 @@
 [x] need to implement the hourly forecast from the api and display it to a side bar 
    that can be collapsed down or removed from the mobile viewBox
 
-[] need to implement a headline api and display it to the other sidebar
+[x] need to implement a headline api and display it to the other sidebar
 
 [] consider what other apis that I might be able to use to make the site more 
    fun to mess around with
