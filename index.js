@@ -55,10 +55,14 @@ function renderScreen(movies) {
   
   location.textContent = `${movies.location.name}`
   temp.textContent = `${movies.current.temp_f} F`
-  if(movies.current.condition.text === "Sunny") {
+  if(movies.current.condition.code === 1000) {
     mainImage.src = '/icons/sunny.png'
-  } else if(movies.current.condition.text = 'Partly Cloudy') {
+  } else if(movies.current.condition.code = 1003) {
     mainImage.src = '/icons/partlyCloudy.png'
+  } else if(movies.current.condition.code = 1087) {
+    mainImage.src = '/icons/thunderStorm.png'
+  } else if(movies.current.condition.code = 1063) {
+    mainImage.src = '/icons/rain.png'
   } else {
     mainImage.src = movies.current.condition.icon
     mainImage.style.height = '80px'

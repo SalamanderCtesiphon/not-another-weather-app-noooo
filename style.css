@@ -133,9 +133,13 @@ form>input {
 }
 
 .locationName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 40px;
   line-height: 50px;
   font-weight: bold;
+  width: 400px;
 }
 
 .subHeader {
