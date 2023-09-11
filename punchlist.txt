@@ -16,3 +16,7 @@
 [] change the damn font to a supported ones
 
 [] deploy to somewher that will hos the images probably firebase
+
+[] need to implement a toggle button for temp units
+
+[] need to implement logic to change the background to black it is after sundown
