@@ -88,17 +88,7 @@ const locationSpan = document.getElementById('locationSpan')
 
 locationSpan.addEventListener('click', (e) => {
   e.preventDefault()
-  const display = document.querySelector('.display')
-  display.style.display = 'none'
-  const cardBody = document.querySelector('.cardBody')
-  cardBody.innerHTML = ''
-
-  
-  const title = document.querySelector('.titleName')
-  title.innerHTML = ''
- 
-  const forcastDisplay = document.getElementById('forcastID')
-  forcastDisplay.style.display = 'none'
+  location.reload()
 })
 
 
