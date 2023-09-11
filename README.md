@@ -2,7 +2,8 @@
 
 "Cute weather app bro", is what they said until they dug into the code 
 and realized that this application is a monumental achievement in javascript 
-jujitsu 
+jujitsu.
+
     -Seamus Quixote
 
 Introduction
