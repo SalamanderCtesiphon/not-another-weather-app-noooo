@@ -9,7 +9,7 @@ selectionBtn.addEventListener('click', (e) => {
   const form = document.getElementById('form')
   form.style.display = 'none'
 
-  const fahrenheit = true
+  var fahrenheit = true
 
   getWeather()
   .then(
@@ -25,6 +25,12 @@ selectionBtn.addEventListener('click', (e) => {
       const tempBtn = document.createElement('button')
       tempBtn.textContent = 'change units'
       tempBtn.setAttribute('class', 'button')
+
+      tempBtn.addEventListener('click', () => {
+        fahrenheit = !fahrenheit
+        console.log(fahrenheit)
+      })
+
       const location = document.createElement('p')
       const dateTime = document.querySelector('.dateTime')
       dateTime.textContent = movies.location.localtime
