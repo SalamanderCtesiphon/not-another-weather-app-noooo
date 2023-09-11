@@ -59,6 +59,17 @@ selectionBtn.addEventListener('click', (e, movies) => {
       const ndText = document.querySelector('.ndText')
       ndText.textContent = movies.forecast.forecastday[1].day.condition.text
 
+      const dayAfterImg = document.querySelector('.daImage')
+      const daTemp = document.querySelector('.daTemp')
+      daTemp.textContent = movies.forecast.forecastday[2].day.maxtemp_f
+      const daimg = document.createElement('img')
+      daimg.src = movies.forecast.forecastday[2].day.condition.icon
+      daimg.style.height = '60px'
+      
+      dayAfterImg.appendChild(daimg)
+      const daText = document.querySelector('.daText')
+      daText.textContent = movies.forecast.forecastday[2].day.condition.text
+
     
 
       locationName.appendChild(location)
