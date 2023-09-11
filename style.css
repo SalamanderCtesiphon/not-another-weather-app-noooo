@@ -250,13 +250,13 @@ footer>a:hover {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: self-start;
   justify-content: flex-start;
 }
 
 .navLink {
   margin: 10px 0;
-  width: 360px;
+  width: 300px;
 }
 
 .navLink:hover {
