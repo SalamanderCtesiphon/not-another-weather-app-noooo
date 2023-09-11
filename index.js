@@ -20,28 +20,29 @@ selectionBtn.addEventListener('click', (e) => {
   })
 })
 
-
-
-function renderScreen(movies) {
-  if(movies.current.is_day === 0) {
-    const background = document.getElementById('body')
-    background.style.background = 'black'
-  }
-
-
+function renderHourlyForecast(movies) {
+  const hourlyDisplay = document.querySelector('.hourlyDisplay')
+  hourlyDisplay.innerHTML = ""
   const hourlyForecast = movies.forecast.forecastday[0].hour
   const hourlyForecastData = []
   hourlyForecast.forEach((item) => {
-    const hourData = {
-      time: item.time.slice(11),
-      imgSrc: item.condition.icon,
-      temp: item.temp_f,
+    var date = new Date();
+
+    var currentTime = ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+    const temperature = fahrenheit ? holder = item.temp_f : holder = item.temp_c
+    if(currentTime > item.time.slice(11)) {
+      return
+    } else {
+      const hourData = {
+        time: item.time.slice(11),
+        imgSrc: item.condition.icon,
+        temp: holder,
+      }
+      hourlyForecastData.push(hourData)
     }
-    hourlyForecastData.push(hourData)
     return hourlyForecastData
   })
-  console.log(hourlyForecastData)
-  const hourlyDisplay = document.querySelector('.hourlyDisplay')
+  
   hourlyForecastData.forEach((item) => {
     const hourlyWeather = document.createElement('div')
     hourlyWeather.setAttribute('class', 'hourlyClass')
@@ -58,6 +59,18 @@ function renderScreen(movies) {
     hourlyWeather.appendChild(hourlyTemp)
     hourlyDisplay.appendChild(hourlyWeather)
   })
+}
+
+
+function renderScreen(movies) {
+  if(movies.current.is_day === 0) {
+    const background = document.getElementById('body')
+    background.style.background = 'black'
+  }
+
+
+  renderHourlyForecast(movies)
+
 
   const display = document.querySelector('.display')
   display.style.display = 'flex'
@@ -76,6 +89,7 @@ function renderScreen(movies) {
   tempBtn.addEventListener('click', (e) => {
     fahrenheit = !fahrenheit
     rerenderTemps(movies)
+    renderHourlyForecast(movies)
   })
 
   const location = document.createElement('p')
