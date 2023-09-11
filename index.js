@@ -26,9 +26,11 @@ selectionBtn.addEventListener('click', (e) => {
       tempBtn.textContent = 'change units'
       tempBtn.setAttribute('class', 'button')
 
-      tempBtn.addEventListener('click', () => {
+      tempBtn.addEventListener('click', (e) => {
         fahrenheit = !fahrenheit
         console.log(fahrenheit)
+        window.location = window.location
+        getWeather()
       })
 
       const location = document.createElement('p')
