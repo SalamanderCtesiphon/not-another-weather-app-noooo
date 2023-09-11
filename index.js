@@ -194,7 +194,6 @@ async function getWeather() {
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=6198ff01fbf84dfbbac171056230305&q=${selection}&days=3`,
       { mode: 'cors'});
     const movies = await response.json();
-    console.log(movies);
     return movies
   }
   
@@ -207,4 +206,17 @@ locationSpan.addEventListener('click', (e) => {
   location.reload()
 })
 
+// News feed
 
+
+async function getHeadlines() {
+  
+  const response = await 
+    fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=a9037fea433b4e8ea292b59c4d2dfbbb`,
+      { mode: 'cors'});
+    const headlines = await response.json();
+    console.log(headlines);
+    return headlines
+}
+
+getHeadlines()
