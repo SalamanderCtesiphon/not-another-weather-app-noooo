@@ -30,14 +30,14 @@ function renderScreen(movies) {
   const title = document.createElement('h1')
   title.setAttribute('class', 'titleName')
   const temp = document.createElement('h1')
+  temp.setAttribute('class', 'currentTemp')
   const tempBtn = document.createElement('button')
   tempBtn.textContent = 'change units'
   tempBtn.setAttribute('class', 'button')
 
   tempBtn.addEventListener('click', (e) => {
     fahrenheit = !fahrenheit
-    console.log(fahrenheit)
-    window.location = window.location
+    rerenderTemps(movies)
   })
 
   const location = document.createElement('p')
@@ -100,6 +100,11 @@ function renderScreen(movies) {
   display.appendChild(cardBody) 
 }
 
+function rerenderTemps(movies) {
+  console.log(fahrenheit)
+  const currentTemp = document.querySelector('.currentTemp')
+  currentTemp.textContent = `${movies.current.temp_c} C`
+}
 
 async function getWeather() {
   let selection = document.getElementById('selection').value
