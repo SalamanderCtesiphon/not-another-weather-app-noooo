@@ -151,15 +151,15 @@ form>input {
 }
 
 .cardBody {
-  margin-top: 20px;
   width: 360px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
 img {
-  height: 180px;
+  height: 140px;
   width: auto;
 }
 
@@ -176,10 +176,10 @@ span:hover {
 }
 
 .forcastDisplay {
-  padding: 20px;
+  padding: 6px;
   display: none;
   justify-content: space-between;
-  width: 460px;
+  width: 440px;
 }
 
 .forcastCard {

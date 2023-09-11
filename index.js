@@ -29,7 +29,7 @@ selectionBtn.addEventListener('click', (e, movies) => {
         mainImage.src = '/icons/sunny.png'
       } else {
         mainImage.src = movies.current.condition.icon
-        mainImage.style.height = '120px'
+        mainImage.style.height = '80px'
       }
 
       title.textContent = movies.current.condition.text
