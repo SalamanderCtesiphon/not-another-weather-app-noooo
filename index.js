@@ -41,6 +41,24 @@ function renderScreen(movies) {
     return hourlyForecastData
   })
   console.log(hourlyForecastData)
+  const hourlyDisplay = document.querySelector('.hourlyDisplay')
+  hourlyForecastData.forEach((item) => {
+    const hourlyWeather = document.createElement('div')
+    hourlyWeather.setAttribute('class', 'hourlyClass')
+    const hourDiv = document.createElement('p')
+    hourDiv.textContent = item.time
+    const forecastIcon = document.createElement('img')
+    forecastIcon.src = item.imgSrc
+    forecastIcon.style.height = '40px'
+    const hourlyTemp = document.createElement('div')
+    hourlyTemp.textContent = item.temp
+  
+    hourlyWeather.appendChild(hourDiv)
+    hourlyWeather.appendChild(forecastIcon)
+    hourlyWeather.appendChild(hourlyTemp)
+    hourlyDisplay.appendChild(hourlyWeather)
+  })
+
   const display = document.querySelector('.display')
   display.style.display = 'flex'
   const locationName = document.querySelector('.locationName')
