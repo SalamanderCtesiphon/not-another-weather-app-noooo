@@ -25,3 +25,6 @@
    is there a trending of github or linked in or something else equally as terrible
 
 [] implement a env file for api key protection
+
+[] implement detail pages for each of the forecast cards, which means making the forecast
+   cards into buttons that navigate to detail pages for the card
