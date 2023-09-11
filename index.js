@@ -37,6 +37,7 @@ function renderScreen(movies) {
   tempBtn.addEventListener('click', (e) => {
     fahrenheit = !fahrenheit
     console.log(fahrenheit)
+    window.location = window.location
   })
 
   const location = document.createElement('p')
@@ -102,12 +103,18 @@ function renderScreen(movies) {
 
 async function getWeather() {
   let selection = document.getElementById('selection').value
-  const response = await 
+  if(selection === '') {
+    alert('please enter a valid city or zip code')
+    location.reload()
+  } else {
+    const response = await 
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=6198ff01fbf84dfbbac171056230305&q=${selection}&days=3`,
       { mode: 'cors'});
-  const movies = await response.json();
-  console.log(movies);
-  return movies
+    const movies = await response.json();
+    console.log(movies);
+    return movies
+  }
+  
 }
 
 const locationSpan = document.getElementById('locationSpan')
