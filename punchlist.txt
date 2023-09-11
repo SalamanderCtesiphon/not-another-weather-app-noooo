@@ -1,0 +1,14 @@
+[] need to add some more conditions in order to set the main weather icon
+   image to the ones from the figma design. They look a lot better than the
+   ones from the api
+
+[] need to implement the hourly forecast from the api and display it to a side bar 
+   that can be collapsed down or removed from the mobile viewBox
+
+[] need to implement a headline api and display it to the other sidebar
+
+[] consider what other apis that I might be able to use to make the site more 
+   fun to mess around with
+
+[] implement a bunch of links and icons and crap just to busy the page up and 
+   make the app look more complicated that it actual is
