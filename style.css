@@ -119,6 +119,10 @@ form>input {
   scale: 0.7;
 }
 
+#tempBtn {
+  margin-bottom: 20px;
+}
+
 .display {
   display: none;
   flex-direction: column;

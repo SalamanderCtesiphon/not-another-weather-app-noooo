@@ -19,7 +19,7 @@
 
 [x] need to implement a toggle button for temp units
 
-[] need to implement logic to change the background to black it is after sundown
+[x] need to implement logic to change the background to black it is after sundown
 
 [] look to implement some sort of trending list for like twitter or other things...
    is there a trending of github or linked in or something else equally as terrible

@@ -42,6 +42,7 @@ function renderScreen(movies) {
   const tempBtn = document.createElement('button')
   tempBtn.textContent = 'change units'
   tempBtn.setAttribute('class', 'button')
+  tempBtn.setAttribute('id', 'tempBtn')
 
   tempBtn.addEventListener('click', (e) => {
     fahrenheit = !fahrenheit
@@ -56,6 +57,8 @@ function renderScreen(movies) {
   temp.textContent = `${movies.current.temp_f} F`
   if(movies.current.condition.text === "Sunny") {
     mainImage.src = '/icons/sunny.png'
+  } else if(movies.current.condition.text = 'Partly Cloudy') {
+    mainImage.src = '/icons/partlyCloudy.png'
   } else {
     mainImage.src = movies.current.condition.icon
     mainImage.style.height = '80px'
