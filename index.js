@@ -21,6 +21,14 @@ selectionBtn.addEventListener('click', (e) => {
 })
 
 function renderScreen(movies) {
+  console.log(movies.current.is_day)
+
+  if(movies.current.is_day === 0) {
+    const background = document.getElementById('body')
+    background.style.background = 'black'
+  }
+
+ 
   
   const display = document.querySelector('.display')
   display.style.display = 'flex'
