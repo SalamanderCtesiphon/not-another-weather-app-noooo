@@ -12,3 +12,7 @@
 
 [] implement a bunch of links and icons and crap just to busy the page up and 
    make the app look more complicated that it actual is
+
+[] change the damn font to a supported ones
+
+[] deploy to somewher that will hos the images probably firebase
