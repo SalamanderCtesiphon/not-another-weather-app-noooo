@@ -219,13 +219,19 @@ async function getHeadlines() {
 
 getHeadlines().then((headlines) => {
   const articles = headlines.articles.splice(0,7)
+  console.log(articles)
   renderHeadlines(articles)
 })
 
 function renderHeadlines (articles) {
   const headlineList = document.querySelector('.headlineList')
   articles.forEach((item) => {
+
+    if(item.title === "[Removed]") {
+      return
+    }
     const link = document.createElement('a')
+    link.setAttribute('class', 'navLink')
     link.href = item.url
     link.textContent = item.title
     headlineList.appendChild(link)
