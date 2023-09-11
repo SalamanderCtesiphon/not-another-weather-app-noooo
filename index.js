@@ -56,6 +56,8 @@ selectionBtn.addEventListener('click', (e, movies) => {
       ndimg.style.height = '60px'
       nextDayImg.appendChild(ndTemp)
       nextDayImg.appendChild(ndimg)
+      const ndText = document.querySelector('.ndText')
+      ndText.textContent = movies.forecast.forecastday[1].day.condition.text
 
       const ndCondition = document.createElement('small')
       ndCondition.textContent = movies.forecast.forecastday[1].day.text
