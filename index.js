@@ -8,7 +8,7 @@ selectionBtn.addEventListener('click', (e) => {
 
   const form = document.getElementById('form')
   form.style.display = 'none'
-  
+
   const fahrenheit = true
 
   getWeather()
@@ -22,10 +22,12 @@ selectionBtn.addEventListener('click', (e) => {
       const title = document.createElement('h1')
       title.setAttribute('class', 'titleName')
       const temp = document.createElement('h1')
+      const tempBtn = document.createElement('button')
+      tempBtn.textContent = 'change units'
+      tempBtn.setAttribute('class', 'button')
       const location = document.createElement('p')
       const dateTime = document.querySelector('.dateTime')
       dateTime.textContent = movies.location.localtime
-      
       
       location.textContent = `${movies.location.name}`
       temp.textContent = `${movies.current.temp_f} F`
@@ -74,16 +76,13 @@ selectionBtn.addEventListener('click', (e) => {
       const daText = document.querySelector('.daText')
       daText.textContent = movies.forecast.forecastday[2].day.condition.text
 
-    
-
       locationName.appendChild(location)
       cardBody.appendChild(mainImage)
-     
       cardBodyBox.appendChild(title)
       cardBodyBox.appendChild(temp)
       cardBody.appendChild(cardBodyBox)
-      display.appendChild(cardBody)
-      
+      cardBody.appendChild(tempBtn)
+      display.appendChild(cardBody) 
     }
   )
   .catch(function(err) {
