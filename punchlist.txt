@@ -1,4 +1,4 @@
-[] need to add some more conditions in order to set the main weather icon
+[x] need to add some more conditions in order to set the main weather icon
    image to the ones from the figma design. They look a lot better than the
    ones from the api
 
