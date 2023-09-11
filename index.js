@@ -101,9 +101,29 @@ function renderScreen(movies) {
 }
 
 function rerenderTemps(movies) {
-  console.log(fahrenheit)
-  const currentTemp = document.querySelector('.currentTemp')
-  currentTemp.textContent = `${movies.current.temp_c} C`
+  if(fahrenheit === false) {
+    const currentTemp = document.querySelector('.currentTemp')
+    currentTemp.textContent = `${movies.current.temp_c} C`
+    const hiTemp = document.getElementById('hiTemp')
+    hiTemp.textContent = movies.forecast.forecastday[0].day.maxtemp_c
+    const lowTemp = document.getElementById('lowTemp')
+    lowTemp.textContent = movies.forecast.forecastday[0].day.mintemp_c
+    const ndTemp = document.querySelector('.ndTemp')
+    ndTemp.textContent = movies.forecast.forecastday[1].day.maxtemp_c
+    const daTemp = document.querySelector('.daTemp')
+    daTemp.textContent = movies.forecast.forecastday[2].day.maxtemp_c
+  } else {
+    const currentTemp = document.querySelector('.currentTemp')
+    currentTemp.textContent = `${movies.current.temp_f} F`
+    const hiTemp = document.getElementById('hiTemp')
+    hiTemp.textContent = movies.forecast.forecastday[0].day.maxtemp_f
+    const lowTemp = document.getElementById('lowTemp')
+    lowTemp.textContent = movies.forecast.forecastday[0].day.mintemp_f
+    const ndTemp = document.querySelector('.ndTemp')
+    ndTemp.textContent = movies.forecast.forecastday[1].day.maxtemp_f
+    const daTemp = document.querySelector('.daTemp')
+    daTemp.textContent = movies.forecast.forecastday[2].day.maxtemp_f
+  }
 }
 
 async function getWeather() {
