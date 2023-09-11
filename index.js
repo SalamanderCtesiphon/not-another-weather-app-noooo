@@ -25,7 +25,11 @@ selectionBtn.addEventListener('click', (e, movies) => {
       temp.textContent = `${movies.current.temp_f} F`
       if(movies.current.condition.text === "Sunny") {
         mainImage.src = '/icons/sunny.png'
+      } else {
+        mainImage.src = movies.current.condition.icon
+        mainImage.style.height = '120px'
       }
+
       title.textContent = movies.current.condition.text
       const cardBodyBox = document.createElement('div')
       cardBodyBox.style.textAlign = 'center'
