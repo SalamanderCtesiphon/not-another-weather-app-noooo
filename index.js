@@ -5,8 +5,12 @@ currentYear.textContent = new Date().getFullYear();
 
 selectionBtn.addEventListener('click', (e) => {
   e.preventDefault()
+
   const form = document.getElementById('form')
   form.style.display = 'none'
+  
+  const fahrenheit = true
+
   getWeather()
   .then(
     (movies) => {
