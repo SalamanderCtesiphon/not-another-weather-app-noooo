@@ -42,6 +42,18 @@ selectionBtn.addEventListener('click', (e, movies) => {
       const sunDown = document.getElementById('sundown')
       sunDown.textContent = movies.forecast.forecastday[0].astro.sunset
 
+      const nextDayImg = document.querySelector('.ndImage')
+      const ndTemp = document.querySelector('.ndTemp')
+      ndTemp.textContent = movies.forecast.forecastday[1].day.text
+      const ndimg = document.createElement('img')
+      ndimg.src = movies.forecast.forecastday[1].day.condition.icon
+      ndimg.style.height = '60px'
+      nextDayImg.appendChild(ndTemp)
+      nextDayImg.appendChild(ndimg)
+
+      const ndCondition = document.createElement('small')
+      ndCondition.textContent = movies.forecast.forecastday[1].day.text
+      nextDayImg.appendChild(ndCondition)
 
       locationName.appendChild(location)
       cardBody.appendChild(mainImage)
