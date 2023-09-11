@@ -210,13 +210,26 @@ locationSpan.addEventListener('click', (e) => {
 
 
 async function getHeadlines() {
-  
-  const response = await 
+    const response = await 
     fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=a9037fea433b4e8ea292b59c4d2dfbbb`,
       { mode: 'cors'});
     const headlines = await response.json();
-    console.log(headlines);
     return headlines
 }
 
-getHeadlines()
+getHeadlines().then((headlines) => {
+  const articles = headlines.articles.splice(0,7)
+  renderHeadlines(articles)
+})
+
+function renderHeadlines (articles) {
+  const headlineList = document.querySelector('.headlineList')
+  articles.forEach((item) => {
+    const link = document.createElement('a')
+    link.href = item.url
+    link.textContent = item.title
+    headlineList.appendChild(link)
+  })
+  return headlineList
+}
+
