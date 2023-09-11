@@ -71,6 +71,11 @@ function renderScreen(movies) {
 
   renderHourlyForecast(movies)
 
+  const rightSidebar = document.querySelector('.rightSidebar')
+  const leftSidebar = document.querySelector('.leftSidebar')
+  rightSidebar.style.display = 'flex'
+  leftSidebar.style.display = 'flex'
+
 
   const display = document.querySelector('.display')
   display.style.display = 'flex'
