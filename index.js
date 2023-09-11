@@ -50,7 +50,7 @@ selectionBtn.addEventListener('click', (e, movies) => {
 
       const nextDayImg = document.querySelector('.ndImage')
       const ndTemp = document.querySelector('.ndTemp')
-      ndTemp.textContent = movies.forecast.forecastday[1].day.text
+      ndTemp.textContent = movies.forecast.forecastday[1].day.maxtemp_f
       const ndimg = document.createElement('img')
       ndimg.src = movies.forecast.forecastday[1].day.condition.icon
       ndimg.style.height = '60px'
