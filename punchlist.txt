@@ -2,7 +2,7 @@
    image to the ones from the figma design. They look a lot better than the
    ones from the api
 
-[] need to implement the hourly forecast from the api and display it to a side bar 
+[x] need to implement the hourly forecast from the api and display it to a side bar 
    that can be collapsed down or removed from the mobile viewBox
 
 [] need to implement a headline api and display it to the other sidebar
