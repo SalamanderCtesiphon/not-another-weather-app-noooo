@@ -19,6 +19,8 @@ selectionBtn.addEventListener('click', (e, movies) => {
       title.setAttribute('class', 'titleName')
       const temp = document.createElement('h1')
       const location = document.createElement('p')
+      const dateTime = document.querySelector('.dateTime')
+      dateTime.textContent = movies.location.localtime
       
       
       location.textContent = `${movies.location.name}`
