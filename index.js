@@ -221,6 +221,8 @@ getHeadlines().then((headlines) => {
   const articles = headlines.articles.splice(0,7)
   console.log(articles)
   renderHeadlines(articles)
+}).catch(function(err) {
+  console.log(err)
 })
 
 function renderHeadlines (articles) {
