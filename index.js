@@ -20,16 +20,27 @@ selectionBtn.addEventListener('click', (e) => {
   })
 })
 
-function renderScreen(movies) {
-  console.log(movies.current.is_day)
 
+
+function renderScreen(movies) {
   if(movies.current.is_day === 0) {
     const background = document.getElementById('body')
     background.style.background = 'black'
   }
 
- 
-  
+
+  const hourlyForecast = movies.forecast.forecastday[0].hour
+  const hourlyForecastData = []
+  hourlyForecast.forEach((item) => {
+    const hourData = {
+      time: item.time.slice(11),
+      imgSrc: item.condition.icon,
+      temp: item.temp_f,
+    }
+    hourlyForecastData.push(hourData)
+    return hourlyForecastData
+  })
+  console.log(hourlyForecastData)
   const display = document.querySelector('.display')
   display.style.display = 'flex'
   const locationName = document.querySelector('.locationName')
