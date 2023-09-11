@@ -19,8 +19,8 @@ selectionBtn.addEventListener('click', (e, movies) => {
       title.setAttribute('class', 'titleName')
       const temp = document.createElement('h1')
       const location = document.createElement('p')
-      const forcastDisplay = document.querySelector('.forcastDisplay')
-      forcastDisplay.style.display = 'flex'
+      
+      
       location.textContent = `${movies.location.name}`
       temp.textContent = `${movies.current.temp_f} F`
       if(movies.current.condition.text === "Sunny") {
@@ -29,6 +29,20 @@ selectionBtn.addEventListener('click', (e, movies) => {
       title.textContent = movies.current.condition.text
       const cardBodyBox = document.createElement('div')
       cardBodyBox.style.textAlign = 'center'
+
+      const forcastDisplay = document.querySelector('.forcastDisplay')
+      forcastDisplay.style.display = 'flex'
+
+      const hiTemp = document.getElementById('hiTemp')
+      hiTemp.textContent = movies.forecast.forecastday[0].day.maxtemp_f
+      const lowTemp = document.getElementById('lowTemp')
+      lowTemp.textContent = movies.forecast.forecastday[0].day.mintemp_f
+      const sunUp = document.getElementById('sunup')
+      sunUp.textContent = movies.forecast.forecastday[0].astro.sunrise
+      const sunDown = document.getElementById('sundown')
+      sunDown.textContent = movies.forecast.forecastday[0].astro.sunset
+
+
       locationName.appendChild(location)
       cardBody.appendChild(mainImage)
      

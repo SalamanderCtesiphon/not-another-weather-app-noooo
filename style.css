@@ -172,22 +172,34 @@ span {
 .forcastDisplay {
   padding: 20px;
   display: none;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 460px;
 }
 
 .forcastCard {
+  font-size: 19px;
   height: 260px;
-  width: 120px;
+  width: 130px;
   display: flex;
-  padding: 20px 8px;
+  padding: 20px 2px;
   flex-direction: column;
   align-items: center;
-  gap: 8px; 
-  border-radius: 50px;
+  justify-content: flex-start;
+  gap: 4px; 
+  border-radius: 40px;
   border: 1px solid rgba(255, 255, 255, 0.112);
   background: linear-gradient(165deg, #FFF -113.24%, rgba(255, 255, 255, 0.00) 97.65%);
 }
+
+small {
+  font-size: 15px;
+}
+
+#sunup, #sundown, #hiTemp, #lowTemp {
+  font-size: 10px;
+  padding: 5px 0;
+}
+
 
 footer {
   width: 100vw;
@@ -199,3 +211,4 @@ footer {
 footer>a {
   display: flex;
 }
+
