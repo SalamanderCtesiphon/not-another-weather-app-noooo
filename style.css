@@ -3,10 +3,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "custom";
-  src: url(/fonts/neuropolitical\ rg.otf);
-}
 
 a {
   text-decoration: none;
@@ -20,9 +16,9 @@ a {
   justify-content: space-between;
   min-height: 100vh;
   min-width: 100vw;
-  font-family: custom, 'Courier New', Courier, monospace;
   background: linear-gradient(135deg, #97ABFF 0%, #123597 100%);
   color: white;
+  font-family: 'Work Sans', sans-serif, 'Poppins';
 }
 
 header {
@@ -32,7 +28,7 @@ header {
 }
 
 header>h1 {
-  font-weight: lighter;
+  font-size: 40px;
 }
 
 main {
@@ -46,7 +42,7 @@ main {
 }
 
 .centerSection {
-  height: 100%;
+  min-height: 80vh;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -137,7 +133,7 @@ form>input {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 340px;
+  min-height: 50vh;
   width: 300px;
 }
 
@@ -145,7 +141,7 @@ form>input {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 50px;
   font-weight: bold;
   width: 400px;
