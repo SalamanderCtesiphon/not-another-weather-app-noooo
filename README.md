@@ -1,11 +1,5 @@
 # not-another-weather-app-noooo
 
-"Cute weather app bro", is what they said until they dug into the code 
-and realized that this application is a monumental achievement in javascript 
-jujitsu.
-
-    -Seamus Quixote
-
 Introduction
 
 Use everything we’ve been discussing to create a weather forecast site using the weather API from the previous lesson. You should be able to search for a specific location and toggle displaying the data in Fahrenheit or Celsius.
