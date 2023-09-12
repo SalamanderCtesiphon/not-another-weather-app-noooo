@@ -213,10 +213,10 @@ locationSpan.addEventListener('click', (e) => {
 
 // News feed
 
-
+/* 
 async function getHeadlines() {
     const response = await 
-    fetch(`https://api.mediastack.com/v1/news?access_key=5d55438475db5c9ab7e86e5f8f0f2752&categories=technology`,
+    fetch(`http://api.mediastack.com/v1/news?access_key=5d55438475db5c9ab7e86e5f8f0f2752&categories=technology`,
       { mode: 'cors'});
     const headlines = await response.json();
     console.log(headlines)
@@ -247,5 +247,5 @@ function renderHeadlines (articles) {
     headlineList.appendChild(link)
   })
   return headlineList
-}
+} */
 
