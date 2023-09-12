@@ -216,7 +216,7 @@ locationSpan.addEventListener('click', (e) => {
 
 async function getHeadlines() {
     const response = await 
-    fetch(`http://api.mediastack.com/v1/news?access_key=5d55438475db5c9ab7e86e5f8f0f2752&categories=technology`,
+    fetch(`https://api.mediastack.com/v1/news?access_key=5d55438475db5c9ab7e86e5f8f0f2752&categories=technology`,
       { mode: 'cors'});
     const headlines = await response.json();
     console.log(headlines)
