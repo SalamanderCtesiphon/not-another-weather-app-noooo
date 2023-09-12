@@ -219,6 +219,7 @@ async function getHeadlines() {
     fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=a9037fea433b4e8ea292b59c4d2dfbbb`,
       { mode: 'cors'});
     const headlines = await response.json();
+    console.log(headlines)
     return headlines
 }
 
