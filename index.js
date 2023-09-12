@@ -216,15 +216,17 @@ locationSpan.addEventListener('click', (e) => {
 
 async function getHeadlines() {
     const response = await 
-    fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=a9037fea433b4e8ea292b59c4d2dfbbb`,
+    fetch(`http://api.mediastack.com/v1/news?access_key=5d55438475db5c9ab7e86e5f8f0f2752&categories=technology`,
       { mode: 'cors'});
     const headlines = await response.json();
     console.log(headlines)
     return headlines
 }
 
+
+
 getHeadlines().then((headlines) => {
-  const articles = headlines.articles.splice(0, 7)
+  const articles = headlines.data.splice(0, 7)
   console.log(articles)
   renderHeadlines(articles)
 }).catch(function(err) {
