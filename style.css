@@ -195,6 +195,12 @@ span:hover {
   width: 440px;
 }
 
+@media (max-width: 500px) {
+  .forcastDisplay  {
+    width: 360px;
+  }
+}
+
 .forcastCard {
   text-align: center;
   font-size: 19px;
@@ -209,6 +215,13 @@ span:hover {
   border-radius: 40px;
   
   background: linear-gradient(165deg, #FFF -113.24%, rgba(255, 255, 255, 0.00) 97.65%);
+}
+
+@media (max-width: 500px) {
+  .forcastDisplay  {
+    width: 100px;
+    padding: 4px;
+  }
 }
 
 small {
