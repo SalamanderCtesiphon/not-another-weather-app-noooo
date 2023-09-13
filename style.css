@@ -197,7 +197,7 @@ span:hover {
 
 @media (max-width: 500px) {
   .forcastDisplay  {
-    width: 360px;
+    width: 380px;
   }
 }
 
@@ -218,9 +218,9 @@ span:hover {
 }
 
 @media (max-width: 500px) {
-  .forcastDisplay  {
-    width: 100px;
-    padding: 4px;
+  .forcastCard  {
+    width: 120px;
+    padding: 8px 4px;
   }
 }
 
